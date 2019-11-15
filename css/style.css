@@ -38,9 +38,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh; }
-  @media only screen and (max-width: (68.75em, 65.25em)) {
-    body {
-      max-height: 100%; } }
 
 .container {
   max-width: 120rem;
@@ -385,11 +382,16 @@ body {
     height: 1rem;
     width: 1rem;
     margin-right: 0.7rem;
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../img/chevron-right.svg);
-    mask-size: cover; }
+    background-image: url(../img/chevron-right.svg);
+    background-size: cover; }
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      .list__item::before {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-right.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../img/chevron-right.svg);
+        mask-size: cover;
+        background-image: none; } }
 
 .recommend {
   display: flex;

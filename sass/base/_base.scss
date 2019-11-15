@@ -57,8 +57,4 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-
-  @media only screen and (max-width: $bp-large, $bp-medium) {
-    max-height: 100%;
-  }
 }
