@@ -1,0 +1,32 @@
+/* MEDIA QUERIES */
+@mixin respond($breakpoint) {
+  @if $breakpoint == bp-smallest {
+    @media only screen and (max-width: 31.25em) {
+      @content; // 500px / 16px = 31.25em
+    }
+  }
+
+  @if $breakpoint == bp-small {
+    @media only screen and (max-width: 37.5em) {
+      @content; // 600px
+    }
+  }
+
+  @if $breakpoint == bp-medium {
+    @media only screen and (max-width: 65.25em) {
+      @content; // 900px
+    }
+  }
+
+  @if $breakpoint == bp-large {
+    @media only screen and (max-width: 68.75em) {
+      @content; // 1100px
+    }
+  }
+
+  @if $breakpoint == bp-largest {
+    @media only screen and (max-width: 75em) {
+      @content; // 1200px
+    }
+  }
+}

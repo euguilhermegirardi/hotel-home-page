@@ -1,0 +1,82 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+}
+
+.header {
+  font-size: 1.4rem;
+}
+
+.detail {
+  font-size: 1.4rem;
+}
+
+.search {
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+}
+
+.user-nav {
+  &__notification {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+}
+
+.side-nav {
+  font-size: 1.4rem;
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-dark-4);
+  text-align: center;
+  padding: 2.5rem;
+
+  @include respond(bp-medium) {
+    display: none;
+  }
+}
+
+.overview {
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @include respond(bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+  }
+
+  &__rating-average {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+
+    @include respond(bp-small) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    @include respond(bp-small) {
+      font-size: 1.5rem;
+    }
+  }
+}
